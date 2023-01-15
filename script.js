@@ -30,6 +30,7 @@ todayEl.innerHTML = `${date.toDateString()}`
 savingsEl.innerHTML = `Ksh ${savings}`
 daysOfSavingEl.innerHTML = `${daysOfSaving} days of saving`
 
+console.log(calendar)
 calendar.forEach((month, index) => {
 	const calendarEl = document.querySelector('#calendar')
 	const monthTitleEl = document.createElement('p')
@@ -67,6 +68,7 @@ function createDays(days) {
 	daysEl.classList.add('grid', 'grid-cols-7', 'gap-4')
 
 	// Set the first day of the month and the last day of the previous month
+	date.setDate(1)
 	const firstDayIndex = date.getDay()
 	const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay()
 	const prevMonthLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate()
