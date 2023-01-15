@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Saving Calendar</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-orange-50">
+
+<div class="container mx-auto">
+	<header>
+		<h1 id="today" class="p-5 md:p-10 lg:px-20 text-center font-bold text-2xl"></h1>
+
+		<div class="p-5 md:p-10 lg:px-20 text-center">
+			<h2 id="savings" class="font-bold text-6xl bg-gradient-to-br from-orange-500 to-purple-500 text-transparent bg-clip-text"></h2>
+			<p id="daysOfSaving" class="mt-4 font-medium text-slate-400"></p>
+		</div>
+
+		<form class="px-5 md:px-10 lg:px-20">
+			<div class="mx-auto w-max flex items-center">
+				<label for="showDays" class="h-6 w-12 block relative rounded-full bg-orange-100 cursor-pointer transition">
+					<input type="checkbox" name="dates" id="showDays" onchange="changeMode(event)" hidden class="mr-2">
+					<span class="absolute top-1/2 left-1 transform -translate-y-1/2 h-4 w-4 bg-orange-500 rounded-full transition"></span>
+				</label>
+				<label for="showDays" class="ml-2 text-xl">
+					Show Days
+				</label>
+			</div>
+		</form>
+	</header>
+
+	<article id="calendar" class="p-5 md:p-10 lg:px-20 md:grid grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-20"></article>
+
+	<footer class="p-5 md:p-10 lg:px-20">
+		<p class="font-semibold text-center text-slate-500">
+			Made for 💰 by <a href="https://ekaranja.me" target="_blank" class="text-orange-500">Emmanuel Karanja</a>.
+		</p>
+	</footer>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
